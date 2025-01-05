@@ -1,0 +1,27 @@
+import json
+from tabulate import tabulate
+
+# Sample JSON data
+# json_data = '''
+# [
+#     {"name": "Alice", "age": 30, "city": "New York"},
+#     {"name": "Bob", "age": 25, "city": "Los Angeles"},
+#     {"name": "Charlie", "age": 35, "city": "Chicago"}
+# ]
+# '''
+
+# # Parse JSON data
+# data = json.loads(json_data)
+def printJsonInTableFormat(json):
+    # Convert JSON data to table format
+    table = tabulate(json, headers="keys", tablefmt="grid")
+
+    # Print the table
+    print(table)
+
+data = [
+    {"name": "Alice", "age": 30, "city": "New York"},
+    {"name": "Bob", "age": 25, "city": "Los Angeles"},
+    {"name": "Charlie", "age": 35, "city": "Chicago"}
+]
+printJsonInTableFormat(data)
